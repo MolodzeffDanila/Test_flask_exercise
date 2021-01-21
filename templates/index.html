@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>bitly, but cursed</title>
+</head>
+<body>
+<style>
+    body {
+    background-image:url({{url_for('static',filename='/Spiral.jpg')}})
+}
+</style>
+    <form method="post" class="main_form">
+        <p class="p1">Paste your URL here:</p>
+        <label>
+            <input type="url" name="url_" id="url_" class="input1"><br>
+            <input type="submit" class="button" value="Укоротить"><br>
+        </label>
+        <div>
+            <p class="p2">Your new URL:</p>
+            <p class="p2">{% if el %}{{ el }}{% endif %}</p>
+        </div>
+        <a href="\post" class="hiperlink"> Free Database </a><br>
+    </form>
+</body>
+</html>

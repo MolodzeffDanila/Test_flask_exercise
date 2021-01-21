@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Database</title>
+</head>
+<body>
+<h1>All generated links:</h1>
+<table class="tab">
+<tr>
+    <th>id</th>
+    <th>Old URL-adress</th>
+    <th>New URL-adress</th>
+   </tr>
+{% for elem in articles %}
+    <div class="post">
+        <tr><td>{{ elem.ident }}</td><td>{{ elem.old_url }}</td><td>{{ elem.new_url }}</td></tr>
+    </div>
+{% endfor %}
+</table>
+</body>
+</html>
